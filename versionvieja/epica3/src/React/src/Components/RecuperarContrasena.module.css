@@ -1,0 +1,153 @@
+
+
+.recuperarContainer {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    color: white;
+    position: relative;
+}
+
+.recuperarContainer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("https://codetheworld.io/wp-content/uploads/2024/09/hero-bg.jpg"), #000;
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+}
+
+.home {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+.wrapper {
+    width: 500px;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid #ffffff80;
+    backdrop-filter: blur(6px);
+    margin: 20px auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Añadido para profundidad */
+}
+
+/* Estilo para el formulario */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* Campos de entrada */
+.input-field {
+    position: relative;
+    margin: 15px 0;
+}
+
+.input-field label {
+    color: #fff;
+    font-size: 16px;
+    display: block; /* Etiqueta ocupa toda la línea */
+    margin-bottom: 5px; /* Espacio entre la etiqueta y el campo */
+}
+
+.input-field input,
+.input-field select {
+    width: 100%;
+    height: 40px;
+    color: #fff;
+    background: transparent;
+    border: 2px solid #ccc; /* Añadido borde para mejorar la visibilidad */
+    outline: none;
+    font-size: 16px;
+    padding: 0 5px;
+    border-radius: 5px; /* Borde redondeado */
+    transition: border-color 0.3s; /* Añadir transición suave al borde */
+}
+
+.input-field input:focus,
+.input-field select:focus {
+    border-color: #fff; /* Cambiado el color del borde al enfocarse */
+}
+
+/* Botones */
+button {
+    background: #ffffffed;
+    color: #000;
+    font-weight: 700; /* Cambiado a 700 para mejor contraste */
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 20px; /* Borde ovalado */
+    font-size: 16px;
+    border: 0 solid transparent;
+    transition: 0.3s ease;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Añadido para profundidad */
+}
+
+button:hover {
+    background-color: rgba(136, 136, 136, 0.753);
+    color: black;
+    transform: translateY(-2px); /* Efecto de elevación */
+}
+
+/* Mensaje de error */
+.error-message {
+    color: #ff5c5c;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+/* Mensaje de éxito */
+.success-message {
+    color: #5cff5c;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+/* Enlace para iniciar sesión */
+.message {
+    text-align: center;
+    margin-top: 30px;
+    color: #fff;
+}
+
+.message a {
+    background: #ffffffed;
+    color: #000;
+    font-weight: 500;
+    border: none;
+    padding: 7px 12px;
+    cursor: pointer;
+    border-radius: 7px;
+    font-size: 16px;
+    border: 0 solid transparent;
+    transition: 0.3s ease;
+    margin-left: 7px;
+    text-decoration: none;
+}
+
+.message a:hover {
+    background-color: rgba(136, 136, 136, 0.753);
+    color: black;
+}

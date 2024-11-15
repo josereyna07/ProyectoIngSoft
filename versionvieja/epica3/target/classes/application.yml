@@ -1,0 +1,5 @@
+ spring: 
+  data:
+    mongodb:
+     uri: mongodb+srv://juandvelasco:Autonoma24@bdiiproject.gyzjo.mongodb.net/?retryWrites=true&w=majority&appName=BDIIPROJECT
+     database: ingsoft

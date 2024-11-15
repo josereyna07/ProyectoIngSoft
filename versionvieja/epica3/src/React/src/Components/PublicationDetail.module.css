@@ -1,0 +1,131 @@
+.publicationDetail {
+    padding: 20px;
+    color: #f7f7f7; /* Color de texto claro para fondo oscuro */
+    background-color: #1a1a1a; /* Fondo oscuro para toda la sección */
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+.publicationDetail h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffdd57; /* Color llamativo para el título */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.publicationDetail p {
+    margin: 10px 0;
+    line-height: 1.6;
+    color: #ddd; /* Color claro para el texto */
+}
+
+.commentsSection {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #333; /* Fondo oscuro para la sección de comentarios */
+    border-radius: 5px;
+    overflow-y: auto;
+    max-height: 400px;
+    color: #f7f7f7; /* Texto claro */
+}
+
+.comment {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #444; /* Fondo ligeramente más claro que la sección */
+    border-radius: 5px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.comment p {
+    margin: 5px 0;
+}
+
+.comment strong {
+    color: #ffdd57; /* Color llamativo para nombres de usuario y etiquetas */
+}
+
+.commentForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.commentForm textarea {
+    width: 100%;
+    max-width: 600px;
+    height: 80px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    resize: none;
+    background-color: #2a2a2a; /* Fondo oscuro para el campo de texto */
+    color: #f7f7f7;
+}
+
+.commentForm textarea::placeholder {
+    color: #aaa; /* Color del placeholder */
+}
+
+.commentForm button {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.commentForm button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para el modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #1a1a1a; /* Mismo fondo que la sección principal */
+    color: #f7f7f7;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 400px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.modal-button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.modal-button:hover {
+    background-color: #0056b3;
+}
+

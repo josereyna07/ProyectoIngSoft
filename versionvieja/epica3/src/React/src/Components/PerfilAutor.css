@@ -1,0 +1,316 @@
+/* Contenedor principal del perfil del autor */
+.perfilAutorContainer {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    background: linear-gradient(0deg, #1a1826, #413b5e);
+  }
+  
+  /* Estilos generales de texto */
+  .perfilAutorContainer p, .title, .usuario {
+    color: white;
+  }
+  
+  .perfilAutorContainer p {
+    font-size: 1em;
+    text-align: left;
+    margin: 10px 70px;
+  }
+  
+  .title {
+    text-align: left;
+    font-size: 2em;
+    margin: 70px;
+  }
+  
+  .usuario {
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+  
+  /* Estilo para los datos del autor */
+  .informacionUsuario {
+    margin: 10px 70px;
+  }
+  
+  .informacionUsuario p {
+    font-size: 1em;
+    color: white;
+    margin: 5px 0;
+  }
+  
+  /* Sección de "Publicaciones del Autor" */
+  .publicacionesAutor {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #1f1b2e;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin: 0 70px;
+  }
+  
+  .publicacionesAutor h2 {
+    font-size: 1.8em;
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  
+  /* Contenedor de Tarjetas de Publicación */
+  .publicationCardWrapper {
+    width: 220px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    word-wrap: break-word;
+  }
+  
+  .publicationThumbnail {
+    width: 100%;
+    height: 120px;
+    background-color: #2e2a3e;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .thumbnailImage {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  .publicationDetails h3 {
+    font-size: 1.1em;
+    color: #ffffff;
+    margin: 8px 0;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+  }
+  
+  .publicationDetails p {
+    font-size: 0.95em;
+    color: #cccccc;
+    margin: 4px 0;
+    text-align: center;
+    max-height: 3.5em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow-wrap: break-word;
+    word-break: break-all;
+    hyphens: auto;
+  }
+  
+  .publicationDetails {
+    width: 100%;
+    max-width: 180px;
+  }
+  
+  /* Estilo de enlace para los nombres de autores */
+  .autorLink {
+    color: #87cefa;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  
+  .autorLink:hover {
+    color: #ffffff;
+  }
+  
+  /* Modal de éxito */
+  .modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .modalContent {
+    background: #211925;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+  
+  .modalContent h2 {
+    margin-bottom: 10px;
+    color: rgb(240, 233, 233);
+  }
+  
+  .modalContent p {
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+  }
+
+  /* Modal para Cambio de Pregunta de Seguridad */
+.modalPreguntaSeguridad {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #211925; /* Fondo oscuro similar al modal de éxito */
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  z-index: 1000;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+}
+
+/* Título del Modal */
+.modalPreguntaSeguridad h2 {
+  color: rgb(240, 233, 233);
+  margin-bottom: 15px;
+}
+
+/* Formulario en el Modal */
+.modalPreguntaSeguridad form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Campo de Entrada */
+.modalPreguntaSeguridad input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(0deg, #1a1826, #413b5e);
+  color: white;
+  font-size: 1em;
+}
+
+/* Mensaje de Error */
+.modalPreguntaSeguridad .error {
+  color: #ff4d4d;
+  font-size: 0.9em;
+  margin-top: -5px;
+  min-height: 20px; /* Asegura que el espacio del error esté reservado */
+}
+
+/* Contenedor de Botones */
+.modalPreguntaSeguridad .buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+}
+
+/* Botones del Modal */
+.modalPreguntaSeguridad button {
+  padding: 10px 20px;
+  background: linear-gradient(0deg, #1a1826, #413b5e);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.modalPreguntaSeguridad button:hover {
+  background-color: #6a5acd;
+  transform: scale(1.05);
+}
+/* Modal para Actualizar Datos */
+.modalActualizar {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #211925; /* Fondo oscuro similar a otros modales */
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  z-index: 1000;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+}
+
+/* Título del Modal */
+.modalActualizar h2 {
+  color: rgb(240, 233, 233);
+  margin-bottom: 15px;
+}
+
+/* Formulario en el Modal */
+.modalActualizar form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Campo de Entrada */
+.modalActualizar input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(0deg, #1a1826, #413b5e);
+  color: white;
+  font-size: 1em;
+}
+
+/* Mensaje de Error */
+.modalActualizar .error {
+  color: #ff4d4d;
+  font-size: 0.9em;
+  margin-top: -5px;
+  min-height: 20px; /* Asegura que el espacio del error esté reservado */
+}
+
+/* Contenedor de Botones */
+.modalActualizar .buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+}
+
+/* Botones del Modal */
+.modalActualizar button {
+  padding: 10px 20px;
+  background: linear-gradient(0deg, #1a1826, #413b5e);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.modalActualizar button:hover {
+  background-color: #6a5acd;
+  transform: scale(1.05);
+}
+

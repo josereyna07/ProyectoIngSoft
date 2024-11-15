@@ -1,0 +1,503 @@
+/* Contenedor principal del perfil */
+.perfilContainer {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  background: linear-gradient(0deg, #1a1826, #413b5e);
+}
+
+/* Estilos generales de texto */
+.perfilContainer p, .title, .usuario {
+  color: white;
+}
+
+.perfilContainer p {
+  font-size: 1em;
+  text-align: left;
+  margin: 10px 70px;
+}
+
+.title {
+  text-align: left;
+  font-size: 2em;
+  margin: 70px;
+}
+
+.usuario {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+/* Botón de cierre de sesión */
+.logoutButton {
+  align-self: flex-end;
+  margin: 40px 20px 10px 0;
+  padding: 10px 20px;
+  background: linear-gradient(0deg, #1a1826, #413b5e);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+}
+
+.logoutButton:hover {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+/* Botones de acciones del perfil */
+.accionesPerfil {
+  margin: 10px 70px;
+}
+
+.accionesPerfil button {
+  background: linear-gradient(0deg, #1a1826, #413b5e);
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+}
+
+.accionesPerfil button:hover {
+  background-color: #0056b3;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+/* Mensaje de éxito */
+.mensajeExito {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: linear-gradient(0deg, #1a1826, #413b5e);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+/* Modales */
+.modalActualizar,
+
+.modalPreguntaSeguridad {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #211925; /* Fondo oscuro similar al modal de éxito */
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  z-index: 1000;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+}
+.modalPreguntaSeguridad h2 {
+  color: rgb(255, 255, 255);
+  margin-bottom: 15px;
+}
+
+/* Formulario en el Modal */
+.modalPreguntaSeguridad form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Campo de Entrada */
+.modalPreguntaSeguridad input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(0deg, #1a1826, #413b5e);
+  color: white;
+  font-size: 1em;
+}
+
+/* Mensaje de Error */
+.modalPreguntaSeguridad .error {
+  color: #ff4d4d;
+  font-size: 0.9em;
+  margin-top: -5px;
+  min-height: 20px; /* Asegura que el espacio del error esté reservado */
+}
+
+/* Contenedor de Botones */
+.modalPreguntaSeguridad .buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+}
+
+/* Botones del Modal */
+.modalPreguntaSeguridad button {
+  padding: 10px 20px;
+  background: linear-gradient(0deg, #1a1826, #413b5e);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.modalPreguntaSeguridad button:hover {
+  background-color: #6a5acd;
+  transform: scale(1.05);
+}
+
+.modalActualizar h2, .modalPreguntaSeguridad h2 {
+  color: black;
+  margin-bottom: 10px;
+}
+
+.modalActualizar form, .modalPreguntaSeguridad form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.modalActualizar label {
+  display: flex;
+  flex-direction: column;
+}
+
+.modalActualizar input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(0deg, #1a1826, #413b5e);
+  color: white;
+}
+
+/* Sección de "Tus Publicaciones" */
+.userPublicationsSection {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #1f1b2e;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin: 0 70px;
+}
+
+.userPublicationsSection h2 {
+  font-size: 1.8em;
+  color: #ffffff;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+/* Contenedor de Tarjetas de Publicación */
+.userPublicationsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+/* Ajuste para el contenedor principal de la tarjeta de publicación */
+.publicationCardWrapper {
+  width: 220px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  word-wrap: break-word; /* Para asegurar que el texto no se salga */
+}
+
+.publicationThumbnail {
+  width: 100%;
+  height: 120px;
+  background-color: #2e2a3e;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.thumbnailImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.publicationDetails h3 {
+  font-size: 1.1em;
+  color: #ffffff;
+  margin: 8px 0;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.publicationDetails p {
+  font-size: 0.95em;
+  color: #cccccc;
+  margin: 4px 0;
+  text-align: center;
+  max-height: 3.5em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow-wrap: break-word; /* Ajusta palabras largas al borde */
+  word-break: break-all; /* Fuerza a dividir palabras largas */
+  hyphens: auto; /* Permite que las palabras se dividan con guiones si es necesario */
+}
+
+
+.publicationDetails {
+  width: 100%;
+  max-width: 180px; /* Ajusta según el diseño */
+}
+
+.actionButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.actionButtons button {
+  padding: 8px 16px;
+  background: linear-gradient(0deg, #1a1826, #413b5e);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.actionButtons button:hover {
+  background-color: #6a5acd;
+  transform: scale(1.05);
+}
+
+
+/* Modal de éxito */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background: #211925;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.modalContent h2 {
+  margin-bottom: 10px;
+  color: rgb(240, 233, 233);
+}
+
+.modalContent p {
+  color: rgb(255, 255, 255);
+  margin-bottom: 20px;
+}
+
+.cambiarContrasenaButton {
+  background: linear-gradient(0deg, #1a1826, #413b5e);
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+}
+
+.cambiarContrasenaButton:hover {
+  background-color: #0056b3;
+}
+
+
+.error {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
+.modalPreguntaSeguridad {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #211925; /* Fondo oscuro similar al modal de éxito */
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  z-index: 1000;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+}
+
+/* Título del Modal */
+.modalPreguntaSeguridad h2 {
+  color: rgb(240, 233, 233);
+  margin-bottom: 15px;
+}
+
+/* Formulario en el Modal */
+.modalPreguntaSeguridad form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Campo de Entrada */
+.modalPreguntaSeguridad input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(0deg, #1a1826, #413b5e);
+  color: white;
+  font-size: 1em;
+}
+
+/* Mensaje de Error */
+.modalPreguntaSeguridad .error {
+  color: #ff4d4d;
+  font-size: 0.9em;
+  margin-top: -5px;
+  min-height: 20px; /* Asegura que el espacio del error esté reservado */
+}
+
+/* Contenedor de Botones */
+.modalPreguntaSeguridad .buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+}
+
+/* Botones del Modal */
+.modalPreguntaSeguridad button {
+  padding: 10px 20px;
+  background: linear-gradient(0deg, #1a1826, #413b5e);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.modalPreguntaSeguridad button:hover {
+  background-color: #6a5acd;
+  transform: scale(1.05);
+}
+/* Modal para Actualizar Datos */
+.modalActualizar {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #211925; /* Fondo oscuro similar a otros modales */
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  z-index: 1000;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+}
+
+/* Título del Modal */
+.modalActualizar h2 {
+  color: rgb(240, 233, 233);
+  margin-bottom: 15px;
+}
+
+/* Formulario en el Modal */
+.modalActualizar form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Campo de Entrada */
+.modalActualizar input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(0deg, #1a1826, #413b5e);
+  color: white;
+  font-size: 1em;
+}
+
+/* Mensaje de Error */
+.modalActualizar .error {
+  color: #ff4d4d;
+  font-size: 0.9em;
+  margin-top: -5px;
+  min-height: 20px; /* Asegura que el espacio del error esté reservado */
+}
+
+/* Contenedor de Botones */
+.modalActualizar .buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+}
+
+/* Botones del Modal */
+.modalActualizar button {
+  padding: 10px 20px;
+  background: linear-gradient(0deg, #1a1826, #413b5e);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.modalActualizar button:hover {
+  background-color: #6a5acd;
+  transform: scale(1.05);
+}
+
+
